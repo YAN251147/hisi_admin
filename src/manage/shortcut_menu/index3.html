@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>后台首页 - Powered by HisiPHP</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../../lib/layui/layui.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div style="padding:0 10px;" class="mcolor"></div>
+
+<div class="layui-tab layui-tab-card">
+    <ul class="layui-tab-title">
+        <li class="layui-this">
+            <a href="javascript:;" id="curTitle">系统日志</a>
+        </li>
+        <div class="tool-btns">
+            <a href="javascript:location.reload();" title="刷新当前页面" class="aicon ai-shuaxin2 font18"></a>
+            <a href="javascript:;" class="aicon ai-quanping1 font18" id="fullscreen-btn" title="打开/关闭全屏"></a>
+        </div>
+    </ul>
+    <div class="layui-tab-content page-tab-content">
+        <div class="layui-tab-item layui-show">
+            <div class="page-toolbar">
+                <div class="layui-btn-group fl">
+                    <a data-href="/admin.php/admin/log/del/table/admin_log.html"
+                       class="layui-btn layui-btn-primary j-page-btns confirm"><i class="aicon ai-jinyong"></i>删除</a>
+                    <a href="/admin.php/admin/log/clear.html" refresh="yes"
+                       class="layui-btn layui-btn-primary j-ajax confirm "><i class="aicon ai-clear"></i>清空所有</a>
+                </div>
+            </div>
+            <form id="pageListForm">
+                <div class="layui-form">
+                    <table class="layui-table mt10" lay-even="" lay-skin="row">
+                        <colgroup>
+                            <col width="50">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" lay-skin="primary" lay-filter="allChoose"></th>
+                            <th>操作者</th>
+                            <th>操作名称</th>
+                            <th>操作地址</th>
+                            <th>操作备注</th>
+                            <th>操作统计</th>
+                            <th>IP地址</th>
+                            <th>最近访问</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25094"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>系统日志</td>
+                            <td><a href="/admin.php/admin/log/index.html">admin/log/index</a></td>
+                            <td>浏览数据</td>
+                            <td>16</td>
+                            <td>140.206.115.154</td>
+                            <td>2017-12-13 11:19:55</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25095"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>数据库管理</td>
+                            <td><a href="/admin.php/admin/database/index.html">admin/database/index</a></td>
+                            <td>浏览数据</td>
+                            <td>16</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:13:36</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25096"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>系统管理员</td>
+                            <td><a href="/admin.php/admin/user/index.html">admin/user/index</a></td>
+                            <td>浏览数据</td>
+                            <td>20</td>
+                            <td>171.217.58.225</td>
+                            <td>2017-12-13 11:19:55</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25097"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>数据库管理</td>
+                            <td><a href="/admin.php/admin/database/index.html">admin/database/index</a></td>
+                            <td>浏览数据</td>
+                            <td>2</td>
+                            <td>124.133.253.210</td>
+                            <td>2017-12-13 09:10:30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25098"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>数据库管理</td>
+                            <td><a href="/admin.php/admin/database/index.html">admin/database/index</a></td>
+                            <td>浏览数据</td>
+                            <td>1</td>
+                            <td>124.133.253.210</td>
+                            <td>2017-12-13 09:10:30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25099"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>后台首页</td>
+                            <td><a href="/admin.php/admin/index/index.html">admin/index/index</a></td>
+                            <td>浏览数据</td>
+                            <td>59</td>
+                            <td>171.217.58.225</td>
+                            <td>2017-12-13 11:19:48</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25100"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>系统设置</td>
+                            <td><a href="/admin.php/admin/system/index.html">admin/system/index</a></td>
+                            <td>浏览数据</td>
+                            <td>31</td>
+                            <td>171.217.58.225</td>
+                            <td>2017-12-13 11:19:50</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25101"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>系统配置</td>
+                            <td><a href="/admin.php/admin/system/index.html">admin/system/index</a></td>
+                            <td>浏览数据</td>
+                            <td>15</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:10:41</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25102"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>上传配置</td>
+                            <td><a href="/admin.php/admin/system/index.html">admin/system/index</a></td>
+                            <td>浏览数据</td>
+                            <td>15</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:11:11</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25103"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>数据库配置</td>
+                            <td><a href="/admin.php/admin/system/index.html">admin/system/index</a></td>
+                            <td>浏览数据</td>
+                            <td>8</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:11:36</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25104"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>开发配置</td>
+                            <td><a href="/admin.php/admin/system/index.html">admin/system/index</a></td>
+                            <td>浏览数据</td>
+                            <td>15</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:11:22</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25105"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>基础配置</td>
+                            <td><a href="/admin.php/admin/system/index.html">admin/system/index</a></td>
+                            <td>浏览数据</td>
+                            <td>6</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:10:33</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25106"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>后台首页</td>
+                            <td><a href="/admin.php/admin/index/welcome.html">admin/index/welcome</a></td>
+                            <td>浏览数据</td>
+                            <td>51</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:17:18</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25107"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>在线支付</td>
+                            <td><a href="/admin.php/pay/index/index.html">pay/index/index</a></td>
+                            <td>浏览数据</td>
+                            <td>14</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:14:11</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" class="layui-checkbox checkbox-ids" value="25108"
+                                       lay-skin="primary"></td>
+                            <td><a href="/admin.php/admin/log/index/uid/1.html">超级管理员</a></td>
+                            <td>支付平台安装</td>
+                            <td><a href="/admin.php/pay/index/install.html">pay/index/install</a></td>
+                            <td>浏览数据</td>
+                            <td>5</td>
+                            <td>116.116.178.3</td>
+                            <td>2017-12-13 11:14:02</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+                        <li class="disabled"><span>&laquo;</span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="/admin.php/admin/log/index.html?page=2">2</a></li>
+                        <li><a href="/admin.php/admin/log/index.html?page=3">3</a></li>
+                        <li><a href="/admin.php/admin/log/index.html?page=4">4</a></li>
+                        <li><a href="/admin.php/admin/log/index.html?page=5">5</a></li>
+                        <li><a href="/admin.php/admin/log/index.html?page=6">6</a></li>
+                        <li><a href="/admin.php/admin/log/index.html?page=2">&raquo;</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
